@@ -1,0 +1,62 @@
+<!-- Extend base template -->
+{% extends "layout.html" %}
+<!-- Fill block with content -->
+{% block content %}
+    <!-- Contain elements in a div -->
+    <div>
+        <!-- Display link to return to home page -->
+        <a href="/home">Home</a>
+        <!-- Display second header -->
+        <h2>Time to pull!</h2>
+        <!-- Display workout heading -->
+        <h3>Pull Workout</h3>
+        <!-- Display ordered list 
+        <ol type="1">
+            <li>Barbell Deadlifts</li>
+            <li>Pull-Ups</li>
+            <li>Cable Rows</li>
+            <li>Hamstring Curls</li>
+            <li>Bicep Curls</li>
+        </ol>
+        -->
+        <!-- Display pull workout table -->
+        <table>
+            <tr>
+                <th>Exercise</th>
+                <th>Reps</th>
+                <th>Sets</th>
+            </tr>
+            <tr>
+                <td>Barbell Deadlifts</td>
+                <td>10</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Pull-Ups</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Cable Rows</td>
+                <td>15</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Hamstring Curls</td>
+                <td>16</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Bicep Curls</td>
+                <td>12</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <!-- Display link to menshealth.com pull workout -->
+        <a href="https://www.menshealth.com/uk/workouts/a44660843/pull-workout-jeff-nippard/">Click Here For Another Pull Workout</a>
+    </div>
+    <!-- display deadlift image-->
+    <div class="deadlift">
+        <img src="/static/pull.png" alt="Image 1">
+    </div>
+{% endblock %}

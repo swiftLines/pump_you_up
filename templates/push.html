@@ -1,0 +1,62 @@
+<!-- Extend base template -->
+{% extends "layout.html" %}
+<!-- Fill block with content -->
+{% block content %}
+    <!-- Contain elements in a div -->
+    <div>
+        <!-- Display link to return to home page -->
+        <a href="/home">Home</a>
+        <!-- Display second heading -->
+        <h2>Time to push!</h2>
+        <!-- Display workout heading -->
+        <h3>Push Workout</h3>
+        <!-- Display ordered list
+        <ol type="1">
+            <li>Barbell Squats</li>
+            <li>Bench Press</li>
+            <li>Shoulder Press</li>
+            <li>Leg Extensions</li>
+            <li>Tricep Pushdowns</li>
+        </ol>
+        -->
+        <!-- Display table for pull workout -->
+        <table>
+            <tr>
+                <th>Exercise</th>
+                <th>Reps</th>
+                <th>Sets</th>
+              </tr>
+            <tr>
+                <td>Barbell Squats</td>
+                <td>10</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Bench Press</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Shoulder Press</td>
+                <td>15</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Leg Extensions</td>
+                <td>20</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Tricep Pushdowns</td>
+                <td>8</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <!-- Display link to verywellfit.com push workout -->
+        <a class= "alt_wrkt" href="https://www.verywellfit.com/total-body-push-workout-1231516">Click Here For Another Push Workout</a>
+    </div>
+    <div>
+        <!-- Display push-up picture -->
+        <img src="/static/push.png" alt="Image 1">
+    </div>
+{% endblock %}

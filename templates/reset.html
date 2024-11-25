@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Title of the page -->
+<div class="container">
+    <h1>UPDATE PASSWORD FORM</h1>
+        {% if error %}
+        <p class="error"><strong>Important Message:</strong> {{ error }}
+            {% endif%}
+            <!-- Add flash message -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages%}
+            <ul class="flashes">
+                {% for message in messages%}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+
+        <!-- Form to register -->
+        <form action="" method="post">
+            <table class="logtable">
+                <caption class="reglink">Have an account? <a href="{{ url_for('login') }}">Login!</a></caption>
+                <tr>
+                    <th class="lghead"><label for="username">Username</label></th>
+                    <td class="lgrow"><input name="username" value="{{
+                        request.form.username }}" id="username"></td>
+                </tr>
+                <tr>
+                    <th class="lghead"><label for="password">New Password</label></th>
+                    <td class="lgrow"><input type="password" name="password" value="{{
+                        request.form.password }}" id="password"></td>
+                </tr>
+                <tr>
+                    <td><input class='fillin' type="submit" value="Reset"></td>
+                </tr>
+                
+            </table>
+
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- Extend base template -->
+{% extends "layout.html" %}
+<!-- Fill block with content -->
+{% block content %}
+    <!-- Contain elements in a div -->
+    <div>
+        <!-- Display second heading -->
+        <h2>I'm going to pump you up!</h2>
+        <!-- Logout-->
+        <a href="/logout">Click to Logout</a>
+        <!-- Display instruction to user -->
+        <h3>Choose a Workout</h3>
+        <!-- Display undorderd list -->
+        <ul>
+            <!-- Link to push and pull pages -->
+            <li><a href="/push">Push Workout</a></li>
+            <li><a href="/pull">Pull Workout</a></li>
+        </ul>
+        <!-- Display link to a youtube video -->
+        <h3><a class="pumped" href="https://www.youtube.com/watch?v=5XEy_VClQMI">Click Here To Get Pumped!</a></h3>
+    </div>
+    <div>
+        <img src="/static/pumped.png" alt="Image 1">
+    </div>
+{% endblock %}

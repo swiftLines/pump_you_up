@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Head title -->
+        <title>Workout Time</title>
+        <!-- Link for main.css -->
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+<body>
+    <!-- Header for the body-->
+    <h1>{{"Workout Time"}}</h1>
+    <!-- Date and time -->
+    <h4>{{date.strftime("%m/%d/%Y %-I:%M %p")}}</h4>
+    <!-- Place templates within a content block -->
+    {% block content %}{% endblock %}   
+</body>
+</html>

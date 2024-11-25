@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Form to register -->
+<div class="container">
+    <h1>REGISTER PASSWORD FORM</h1>
+        {% if error %}
+        <p class="error"><strong>Important Message:</strong> {{ error }}
+            {% endif%}
+            <!-- Add flash message -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages%}
+            <ul class="flashes">
+                {% for message in messages%}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        <form action="/register" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <!-- Button to submit registration -->
+            <button type="submit">Register</button>
+        </form>
+</div>
+<div>
+    <!-- Display image of clock -->
+    <img src="/static/clock.png" alt="Image 1">
+</div>
+{% endblock %}
